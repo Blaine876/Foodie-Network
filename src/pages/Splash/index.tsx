@@ -4,9 +4,8 @@ import styled from "styled-components";
 
 const SplashContainer = styled.div`
   height: 100vh;
-  background-color: #76ed68;
+  background: linear-gradient(to right, #76ed68, #5fbf54);
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 `;
@@ -17,8 +16,14 @@ const SplashLogo = styled.img`
 
 const LogoText = styled.h1`
   font-family: "Scope One", serif;
-  font-size: 4rem;
+  font-size: 5rem;
   color: white;
+  margin-right: 1rem;
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.mobile.sm}) and (max-width: ${({ theme }) => theme.mobile.md}) {
+    font-size: 4rem;
+  }
 `;
 
 const Splash = () => {
