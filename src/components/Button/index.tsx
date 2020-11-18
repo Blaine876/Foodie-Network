@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface ButtonProps {
   buttonText: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const ButtonContainer = styled.div`
@@ -25,10 +26,10 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-const Button: React.FC<ButtonProps> = ({ buttonText }) => {
+const Button: React.FC<ButtonProps> = ({ buttonText, onClick }) => {
   return (
     <ButtonContainer>
-      <StyledButton>{buttonText}</StyledButton>
+      <StyledButton onClick={onClick}>{buttonText}</StyledButton>
     </ButtonContainer>
   );
 };

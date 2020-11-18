@@ -1,9 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
 import logo from "../../assets/logoLarge.png";
 
 import Button from "../../components/Button";
+
+import styled from "styled-components";
 
 const LoginContainer = styled.div`
   min-height: 100vh;
@@ -110,6 +112,7 @@ const LoginLink = styled(Link)`
 `;
 
 const Login = () => {
+  const history = useHistory();
   return (
     <LoginContainer>
       <LoginMain>
@@ -124,7 +127,7 @@ const Login = () => {
             <InputDiv>
               <InputField type="text" placeholder="Password" />
             </InputDiv>
-            <Button buttonText="Login" />
+            <Button onClick={() => history.push("/")} buttonText="Login" />
           </LoginForm>
           <LoginText>
             Don't have an account?

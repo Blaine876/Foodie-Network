@@ -6,15 +6,17 @@ import Splash from "../pages/Splash";
 import AddMeal from "../pages/AddMeal";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
+import Details from "../pages/Details";
 
 const Routes = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/addmeal" component={AddMeal} />
-      <Route exact path="/splash" component={Splash} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/signup" component={SignUp} />
+      <Route path="/addmeal" component={AddMeal} />
+      <Route path="/splash" component={Splash} />
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={SignUp} />
+      <Route exact path="/details" component={Details} />
     </Switch>
   );
 };

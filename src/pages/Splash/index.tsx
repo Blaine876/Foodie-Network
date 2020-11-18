@@ -29,7 +29,7 @@ const LogoText = styled.h1`
 const Splash = () => {
   return (
     <SplashContainer>
-      <LogoText>Island Dish</LogoText>
+      <LogoText>Foodie Network</LogoText>
       <SplashLogo src={logo} alt="logo" />
     </SplashContainer>
   );

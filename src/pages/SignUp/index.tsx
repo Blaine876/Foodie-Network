@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import logo from "../../assets/logoLarge.png";
 
 import Button from "../../components/Button";
@@ -110,6 +110,7 @@ const SignUpLink = styled(Link)`
 `;
 
 const SignUp = () => {
+  const history = useHistory();
   return (
     <SignUpContainer>
       <SignUpMain>
@@ -124,7 +125,7 @@ const SignUp = () => {
             <InputDiv>
               <InputField type="text" placeholder="Password" />
             </InputDiv>
-            <Button buttonText="SignUp" />
+            <Button onClick={() => history.push("/")} buttonText="SignUp" />
           </SignUpForm>
           <SignUpText>
             Already have an account?
